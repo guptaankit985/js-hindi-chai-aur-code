@@ -88,7 +88,7 @@ setInterval(function () {
 ```javascript
 
 let randomNumber = parseInt(Math.random() * 100 + 1);
-
+console.log(`Here is the RandomNumber for cheaters ${randomNumber}`);
 const submit = document.querySelector('#subt');
 const userInput = document.querySelector('#guessField');
 const guessSlot = document.querySelector('.guesses');
@@ -147,7 +147,16 @@ function displayGuess(guess) {
   userInput.value = '';
   guessSlot.innerHTML += `${guess}, `;
   numGuess++;
-  remaining.innerHTML = `${11 - numGuess} `;
+  //Got too lazy only made this changings that the Instructor asked
+  //very nice person sweet and calm good guy hitesh Sir or mate 
+  //I would like to hear the story behind the tatoos 
+  //Since he doesn't seem that kind of guy to have tatoos/
+  //looks fine though
+  if (11 - numGuess === -1) {
+    remaining.innerHTML = 0;
+  } else {
+    remaining.innerHTML = `${11 - numGuess} `;
+  }
 }
 
 function displayMessage(message) {
