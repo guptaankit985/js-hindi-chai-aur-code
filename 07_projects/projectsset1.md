@@ -39,27 +39,30 @@ buttons.forEach(function (button) {
 ## project 2 solution
 
 ```javascript
-const form = document.querySelector('form');
-// this usecase will give you empty
-// const height = parseInt(document.querySelector('#height').value)
+const Calculator = document.querySelector('form');
 
-form.addEventListener('submit', function (e) {
-  e.preventDefault();
-
+Calculator.addEventListener('submit', (e) => {
+  e.preventDefault(); //this thingi cause me some extra time mate
   const height = parseInt(document.querySelector('#height').value);
   const weight = parseInt(document.querySelector('#weight').value);
-  const results = document.querySelector('#results');
-
-  if (height === '' || height < 0 || isNaN(height)) {
-    results.innerHTML = `Please give a valid height ${height}`;
-  } else if (weight === '' || weight < 0 || isNaN(weight)) {
-    results.innerHTML = `Please give a valid weight ${weight}`;
+  if (weight === '' || weight < 0 || isNaN(weight)) {
+    alert(`Not Valid weight ${weight}`);
+  } else if (height === '' || height < 0 || isNaN(height)) {
+    alert(`Not Valid Height ${height}`);
   } else {
     const bmi = (weight / ((height * height) / 10000)).toFixed(2);
-    //show the result
-    results.innerHTML = `<span>${bmi}</span>`;
+
+    //the extra work down to if else ...
+    if (bmi < 18.6) {
+      results.innerHTML = `<span>Under Weight: ${bmi}</span>`;
+    } else if (bmi > 24.9) {
+      results.innerHTML = `<span>Overweight: ${bmi}</span>`;
+    } else {
+      results.innerHTML = `<span>Normal: ${bmi}</span>`;
+    }
   }
 });
+
 
 
 ```
@@ -85,7 +88,7 @@ setInterval(function () {
 ```javascript
 
 let randomNumber = parseInt(Math.random() * 100 + 1);
-
+console.log(`Here is the RandomNumber for cheaters ${randomNumber}`);
 const submit = document.querySelector('#subt');
 const userInput = document.querySelector('#guessField');
 const guessSlot = document.querySelector('.guesses');
@@ -144,7 +147,16 @@ function displayGuess(guess) {
   userInput.value = '';
   guessSlot.innerHTML += `${guess}, `;
   numGuess++;
-  remaining.innerHTML = `${11 - numGuess} `;
+  //Got too lazy only made this changings that the Instructor asked
+  //very nice person sweet and calm good guy hitesh Sir or mate 
+  //I would like to hear the story behind the tatoos 
+  //Since he doesn't seem that kind of guy to have tatoos/
+  //looks fine though
+  if (11 - numGuess === -1) {
+    remaining.innerHTML = 0;
+  } else {
+    remaining.innerHTML = `${11 - numGuess} `;
+  }
 }
 
 function displayMessage(message) {
