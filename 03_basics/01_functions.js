@@ -6,6 +6,13 @@ function sayMyName(){
     console.log("E");
     console.log("S");
     console.log("H");
+    console.log("c");
+    console.log("h");
+    console.log("o");
+    console.log("a");
+    console.log("d");
+    console.log("r");
+    console.log("y");
 }
 
 // sayMyName()
