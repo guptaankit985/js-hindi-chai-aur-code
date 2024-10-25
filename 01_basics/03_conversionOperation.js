@@ -1,68 +1,66 @@
-let score = "hitesh"
+let score = "hitesh";
 
-//console.log(typeof score);
-//console.log(typeof(score));
+// console.log(typeof score); // Logs: "string" (score is a string)
+// console.log(typeof(score)); // Alternative syntax, also logs: "string"
 
-let valueInNumber = Number(score)
-//console.log(typeof valueInNumber);
-//console.log(valueInNumber);
+let valueInNumber = Number(score); // Attempts to convert "hitesh" to a number, which fails
+// console.log(typeof valueInNumber); // Logs: "number" (Number conversion returns a number type)
+// console.log(valueInNumber); // Logs: NaN (Not a Number, because "hitesh" can't be converted to a numeric value)
 
-
+// Examples of Number conversions:
 // "33" => 33
-// "33abc" => NaN
-//  true => 1; false => 0
+// "33abc" => NaN (invalid number format)
+// true => 1; false => 0
 
-let isLoggedIn = "hitesh"
+let isLoggedIn = "hitesh";
+let booleanIsLoggedIn = Boolean(isLoggedIn); // Non-empty strings are truthy
+// console.log(booleanIsLoggedIn); // Logs: true
 
-let booleanIsLoggedIn = Boolean(isLoggedIn)
-//  console.log(booleanIsLoggedIn);
-
+// Boolean conversion examples:
 // 1 => true; 0 => false
-// "" => false
-// "hitesh" => true
+// "" => false (empty string is falsy)
+// "hitesh" => true (non-empty string is truthy)
 
-let someNumber = 33
-
-let stringNumber = String(someNumber)
-// console.log(stringNumber);
-// console.log(typeof stringNumber);
+let someNumber = 33;
+let stringNumber = String(someNumber); // Converts number to string
+// console.log(stringNumber); // Logs: "33" (as a string)
+// console.log(typeof stringNumber); // Logs: "string"
 
 // *********************** Operations ***********************
 
-let value = 3
-let negValue = -value
-// console.log(negValue);
+let value = 3;
+let negValue = -value; // Negates the value
+// console.log(negValue); // Logs: -3
 
-// console.log(2+2);
-// console.log(2-2);
-// console.log(2*2);
-// console.log(2**3);
-// console.log(2/3);
-// console.log(2%3);
+// Arithmetic Operations
+// console.log(2 + 2); // Logs: 4 (addition)
+// console.log(2 - 2); // Logs: 0 (subtraction)
+// console.log(2 * 2); // Logs: 4 (multiplication)
+// console.log(2 ** 3); // Logs: 8 (exponentiation)
+// console.log(2 / 3); // Logs: 0.666... (division)
+// console.log(2 % 3); // Logs: 2 (remainder)
 
-let str1 = "hello"
-let str2 = " hitesh"
+let str1 = "hello";
+let str2 = " hitesh";
+let str3 = str1 + str2; // Concatenates two strings
+// console.log(str3); // Logs: "hello hitesh"
 
-let str3 = str1 + str2
-// console.log(str3);
+// String + Number operations:
+// console.log("1" + 2); // Logs: "12" (string concatenation)
+// console.log(1 + "2"); // Logs: "12" (string concatenation)
+// console.log("1" + 2 + 2); // Logs: "122" (string concatenation from left to right)
+// console.log(1 + 2 + "2"); // Logs: "32" (1+2 evaluated first, then concatenated with "2")
 
-// console.log("1" + 2);
-// console.log(1 + "2");
-// console.log("1" + 2 + 2);
-// console.log(1 + 2 + "2");
+// Complex expressions
+// console.log((3 + 4) * 5 % 3); // Logs: 2 (calculates (3+4) -> 7, 7*5 -> 35, 35 % 3 -> 2)
 
-// console.log( (3 + 4) * 5 % 3);
+// Unary plus (converts to number)
+// console.log(+true); // Logs: 1 (boolean true converts to 1)
+// console.log(+"");   // Logs: 0 (empty string converts to 0)
 
-// console.log(+true);
-// console.log(+"");
+let num1, num2, num3;
+num1 = num2 = num3 = 2 + 2; // Assigns 4 to num1, num2, and num3
 
-let num1, num2, num3
-
-num1 = num2 = num3 = 2 + 2
-
-let gameCounter = 100
-++gameCounter;
-console.log(gameCounter);
-
-// link to study
-// https://tc39.es/ecma262/multipage/abstract-operations.html#sec-type-conversion
+let gameCounter = 100;
+++gameCounter; // Increments gameCounter by 1
+console.log(gameCounter); // Logs: 101
