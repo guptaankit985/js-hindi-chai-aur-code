@@ -38,3 +38,8 @@ const myObject = {
 //     console.log(key, ':-', value);
     
 // }
+
+// We can use for...of loop on object entries like this,
+for (const [key, value] of Object.entries(myObject)) {
+  console.log(key, ':-', value);
+}
