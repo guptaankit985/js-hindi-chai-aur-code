@@ -48,3 +48,14 @@ const addTwo = function (num) {
 };
 
 // The call to addTwo() must be after its definition to work
+
+
+
+// Notes:
+// Block Scope: Variables declared with let and const are block-scoped, meaning they are only accessible within the block they are declared in. This is why the inner a and b are not accessible outside their respective blocks.
+
+// Function Hoisting: Function declarations (like addone) are hoisted, meaning they can be called before their definition. However, function expressions (like addTwo) are not hoisted in the same way. This is why calling addTwo(5) before its declaration would result in an error.
+
+// Closure: The inner function two has access to variables declared in its outer function one, demonstrating how closures work in JavaScript. This is why username can be logged in two.
+
+// Undefined Variables: The commented-out lines for logging variables outside their scope (like b and c) would throw errors, highlighting the importance of variable scope.
