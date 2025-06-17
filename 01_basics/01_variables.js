@@ -17,6 +17,7 @@ console.log(accountId);
 Prefer not to use var
 because of issue in block scope and functional scope
 */
-
+const mail=1222
+console.log(mail);
 
 console.table([accountId, accountEmail, accountPassword, accountCity, accountState])
