@@ -265,7 +265,7 @@
 // }
 // console.log(result)
 
-const obj = [1,5,7,9,6,3,5]
+const obj = [1,5,7,9,0,6,3,5]
 let max = obj[0]
 for(i=0; i<obj.length; i++){
   if (obj[i]>max){
